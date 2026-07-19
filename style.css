@@ -1,0 +1,269 @@
+:root {
+  --bg: #140909;
+  --surface: #221111;
+  --surface-2: #2f1717;
+  --text: #f3eaea;
+  --muted: #c4a9a9;
+  --accent: #ff7b54;
+  --accent-2: #ffb176;
+  --border: rgba(255, 255, 255, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top, #2d1111 0%, var(--bg) 55%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-2);
+}
+
+.site-header,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 2rem;
+  background: rgba(28, 10, 10, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--accent-2);
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu a {
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+.menu a:hover {
+  background: rgba(255, 123, 84, 0.15);
+}
+
+main {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.hero,
+.about,
+.projects,
+.contact-section {
+  background: rgba(34, 17, 17, 0.92);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.4rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #1f0e0e;
+}
+
+.btn-primary:hover {
+  color: #1f0e0e;
+}
+
+.btn-secondary {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.hero-card {
+  display: flex;
+  justify-content: center;
+}
+
+.my-photo {
+  width: min(100%, 320px);
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.about,
+.projects,
+.contact-section {
+  margin-bottom: 1.5rem;
+}
+
+.section-heading {
+  margin-bottom: 1.2rem;
+}
+
+.about-grid,
+.project-grid,
+.contact-links {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about-card,
+.project-card,
+.contact-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.1rem;
+}
+
+.about-card p,
+.project-card p {
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.project-card span {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: var(--accent-2);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.contact-links {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact-card {
+  text-align: center;
+  font-weight: 700;
+}
+
+.contact-card:hover {
+  border-color: var(--accent);
+}
+
+footer {
+  justify-content: center;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  border-bottom: none;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .about-grid,
+  .project-grid,
+  .contact-links {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header,
+  footer {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  main {
+    width: min(100% - 1rem, 1120px);
+  }
+
+  .hero,
+  .about,
+  .projects,
+  .contact-section {
+    padding: 1.2rem;
+  }
+}
+
+
