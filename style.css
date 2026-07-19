@@ -241,13 +241,6 @@ footer {
 }
 
 @media (max-width: 900px) {
-  .hero,
-  .about-grid,
-  .project-grid,
-  .contact-links {
-    grid-template-columns: 1fr;
-  }
-
   .hero {
     gap: 1.2rem;
   }
@@ -265,10 +258,19 @@ footer {
   }
 
   .hero,
+  .about-grid,
+  .project-grid,
+  .contact-links,
+  .hero,
   .about,
   .projects,
   .contact-section {
+    grid-template-columns: 1fr;
     padding: 1.2rem;
+  }
+
+  .about-skills {
+    grid-column: span 1;
   }
 }
 
