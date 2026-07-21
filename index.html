@@ -8,7 +8,7 @@
     <title>Игорь Козлов | Портфолио</title>
 </head>
 <body>
-    <header class="site-header">
+    <header class="site-header reveal">
         <a class="brand" href="#top">HHSIR</a>
         <nav class="menu">
             <a href="#about">Обо мне</a>
@@ -18,7 +18,7 @@
     </header>
 
     <main id="top">
-        <section class="hero">
+        <section class="hero reveal">
             <div class="hero-copy">
                 <p class="eyebrow">Разработчик и дизайнер цифровых решений</p>
                 <h1>Создаю сайты и приложения, которые выглядят стильно и работают уверенно.</h1>
@@ -33,7 +33,7 @@
             </div>
         </section>
 
-        <section class="about" id="about">
+        <section class="about reveal" id="about">
             <div class="section-heading">
                 <p class="eyebrow">Обо мне</p>
                 <h2>Кто я и чем занимаюсь</h2>
@@ -43,38 +43,38 @@
                     <h3>Что я делаю</h3>
                     <p>Разрабатываю сайты, веб-приложения, консольные инструменты, WPF и WinForms приложения.</p>
                 </article>
-                <article class="about-card">
+                <article class="about-card reveal" data-delay="2">
                     <h3>Подход</h3>
                     <p>Фокус на понятном интерфейсе, аккуратной архитектуре и результате, который полезен клиенту.</p>
                 </article>
-                <article class="about-card">
+                <article class="about-card reveal" data-delay="3">
                     <h3>Цель</h3>
                     <p>Помогаю запускать проекты, которые выглядят профессионально и работают без лишних сложностей.</p>
                 </article>
-                <article class="about-skills">
+                <article class="about-skills reveal" data-delay="3">
                     <h3>Навыки</h3>
                     <p>Владение современными технологиями веб-разработки, включая HTML, CSS, JavaScript, React, C#, а также опыт работы с базами данных и серверной логикой: Node.js, .NET, REST API, SQLite, PostgreSQL.</p>
                 </article>
             </div>
         </section>
 
-        <section class="projects" id="projects">
+        <section class="projects reveal" id="projects">
             <div class="section-heading">
                 <p class="eyebrow">Проекты</p>
                 <h2>Некоторые из моих работ</h2>
             </div>
             <div class="project-grid">
-                <article class="project-card">
+                <article class="project-card reveal" data-delay="1">
                     <h3>Информационный сайт для бизнеса</h3>
                     <p>Современный многостраничный веб-сайт с понятным сообщением и понятным CTA.</p>
                     <span><a href="https://angara-strk.ru" target="_blank" rel="noreferrer">Сайт "Ангара-Стройконтроль"</a></span>
                 </article>
-                <article class="project-card">
+                <article class="project-card reveal" data-delay="2">
                     <h3>Веб-приложение на React для криптовалюты</h3>
                     <p>Инструмент с удобным интерфейсом и логикой, которая помогает пользователю анализировать и покупать криптовалюту.</p>
                     <span><a href="https://github.com/hhserogi/HolyCoin_TON_Explorer.git" target="_blank" rel="noreferrer">Веб-приложение HolyCoin.ton</a></span>
                 </article>
-                <article class="project-card">
+                <article class="project-card reveal" data-delay="3">
                     <h3>Desktop-приложение</h3>
                     <p>Приложение для Windows с аккуратным интерфейсом и практической функциональностью.</p>
                     <span><a href="https://github.com/hhserogi/efcore-sqlite-cqrsPattern.git" target="_blank" rel="noreferrer">C# Desktop-приложение</a></span>
@@ -82,20 +82,21 @@
             </div>
         </section>
 
-        <section class="contact-section" id="contact">
+        <section class="contact-section reveal" id="contact">
             <div class="section-heading">
                 <p class="eyebrow">Контакты</p>
                 <h2>Свяжитесь со мной</h2>
             </div>
             <div class="contact-links">
-                <a class="contact-card" href="https://t.me/bitmakernmb1" target="_blank" rel="noreferrer">Telegram</a>
-                <a class="contact-card" href="https://github.com/hhserogi" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="contact-card reveal" data-delay="1" href="https://t.me/bitmakernmb1" target="_blank" rel="noreferrer">Telegram</a>
+                <a class="contact-card reveal" data-delay="2" href="https://github.com/hhserogi" target="_blank" rel="noreferrer">GitHub</a>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="reveal">
         <p>&copy; 2026 Игорь Козлов. Все права защищены.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
